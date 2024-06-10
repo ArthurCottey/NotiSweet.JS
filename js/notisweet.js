@@ -40,7 +40,7 @@ const notiSweet = ({ type, title, message, second = undefined }) => {
         setTimeout(() => notificationBox.remove(), 700);
     };
     closeButton.addEventListener('click', removeNotification);
-    if (timeout) {
+    if (second !== undefined) {
         setTimeout(() => notificationBox.classList.remove('notiSweet_swipeUpAnim'), 700);
         setTimeout(removeNotification, (second * 1000) + 700);
     }
